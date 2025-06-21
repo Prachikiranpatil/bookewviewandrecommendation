@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Meet Your Favorite Authors Event</title>
+     <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS file is named style.css and in the same directory -->
+     <link rel="stylesheet" href="post.css">   <!-- Added for .post-image styles -->
+
+</head>
+<body>
+    <div class="header1">
+        <div class="header-left">
+          <!----  <img src="C:\Users\admin\OneDrive\Desktop\my app\Logo.png" alt="Book Review and Recommendations Logo" />--->
+            <span>Book Review and Recommendations</span>
+        </div>
+        <div class="header-right">
+            <input type="text" id="searchInput" placeholder="Search books..." />
+            <button type="button" id="searchButton" aria-label="Search">🔍</button>
+        </div>
+        </div>
+    </div>
+<div class="content">
+
+
+ <div id="searchResultsContainer">
+           <!-- Search results will be dynamically inserted here by JavaScript -->
+           <!-- You can add a placeholder message if you like:
+           <p class="search-placeholder">Search for books to see results here.</p>
+           -->
+       </div>
+       <div class = "register">
+        <p>Meet Your Favorite Authors Event</p>
+       </div>
+       <p>Fri, 11 Jul  |  Pune Literature Auditorium</p>
+        
+<p>Meet your favorite authors and get your books signed at this unique Pune event.</p>
+
+            <a href="ticket.html" class="cta-button" id="buyTicketsButton">Buy Tickets</a> <!-- Changed href to #, as functionality is handled by JS -->
+        </div>
+        <img src="https://static.wixstatic.com/media/a9e70d_270c45c17dc2498caf9bb97f0a875240~mv2.png/v1/fill/w_979,h_552,fp_0.50_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/a9e70d_270c45c17dc2498caf9bb97f0a875240~mv2.png" alt="Post Image" class="post-image">
+          <div class = "time-location">
+        <h2>Time & Location</h2>
+        <p>11 Jul 2025, 4:11 pm – 6:11 pm</p>
+        <p>Pune Literature Auditorium, Pune, Maharashtra, India</p>
+        <!-- Google Map Embed -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.147834026803!2d73.8540210749999!3d18.52209888257403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c065d4f5b5f7%3A0x7a9a5a5a5a5a5a5a!2sPune%20Literature%20Auditorium!5e0!3m2!1sen!2sin!4v1695000000000!5m2!1sen!2sin"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Event Location Map"></iframe>
+        </div>
+    </div>
+       <div class="ticket"> 
+        <h2 id="ticketsSection"> Tickets</h2> </div>
+      
+        <div class="tickets-info">
+
+            <p>Ticket Price: ₹500</p>
+            
+            
+            <p>Service Fee: ₹50</p>
+            <hr>
+            <label for="ticketQuantity">Select Quantity:</label>
+            <select id="ticketQuantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <hr>
+            <p>Subtotal: <span id="subtotal">₹550</span></p>
+                                            
+            <p>Total Cost: <span id="totalCost">₹550 </span></p>
+                                           
+        </div>
+        
+    </div> <!-- Content div now closes here, before the script tag -->
+    <div class="site-footer">
+        <div class="split-left-content">
+                <p>Book review and recommendation</p>
+                   <h3>Stay Connected With Us</h3>
+               </div>
+               <div class="split-divider"></div>
+                <div class="split-right-content">
+                   <p>951-853-1789</p>                  
+                   <p>prachikiranpatil@gmail.com</p>     
+                   <p>Pune , Maharashtra , India</p>
+                    <div class="post-interactions">
+                        <!-- Facebook Share Button -->
+                        <a href="https://www.facebook.com/" target="_blank" class="interaction-btn" aria-label="Share on Facebook">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> Facebook
+                        </a>
+                        <!-- Twitter Share Button -->
+                        <a href="https://tweetdeck.twitter.com/" target="_blank" class="interaction-btn" aria-label="Share on twitter">
+                            <img src="https://static.vecteezy.com/system/resources/previews/031/737/215/large_2x/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023-x-social-media-icon-free-png.png" alt="Twitter" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> Twitter
+                        </a>
+                        <!-- linkedin Share Button -->
+                        <a href="https://www.linkedin.com/" target="_blank" class="interaction-btn" aria-label="Share on linkedin">
+                            <img src="https://logospng.org/download/linkedin/logo-linkedin-icon-4096.png" alt="Linkedin" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;" > Linkedin
+                        </a>
+                    </div>
+                    <div class="policy-links">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="accessibility.html">Accessibility Statement</a>
+                        <a href="terms.html">Terms & Conditions</a>
+    
+                        <a href="refund.html">Refund Policy</a>
+                    </div>
+                </div>
+    </div>
+
+
+    </body>
+        <script src="script.js"></script> <!-- Add your script file here -->
+        </html>
