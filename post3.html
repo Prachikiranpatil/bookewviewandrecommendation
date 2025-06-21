@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Book Review and Recommendations</title>
+     <link rel="stylesheet" href="styles.css"> <!-- Changed to use the main styles.css -->
+     <link rel="stylesheet" href="explore.css">
+     <link rel="stylesheet" href="post.css">
+     </head>
+  <body>
+    <div class="header">
+        <div class="header-left">
+       <!---     <img src="C:\Users\admin\OneDrive\Desktop\my app\Logo.png" alt="Book Review and Recommendations Logo" />-->
+            <span>Book Review and Recommendations</span>
+        </div>
+        <div class="header-right">
+            <input type="text" placeholder="Search..." />
+            <button type="button" aria-label="Search">🔍</button> <!-- Search icon (emoji) -->
+        
+        </div>
+    </div> <!-- Closing tag for header -->
+    <!--second post over here-->
+  <!----  <div class="content"> 
+        <div class="post-card" data-post-id="1"> 
+            <a href="post3.html" class="post-clickable-area">
+               
+                <h3 class="post-name">Review and Recommendations</h3>
+               <p class = "post-content-snippet">Are you an avid reader looking for your next literary adventure? Look no further than "Book Review and Recommendations"! This innovative app is a game-changer for book lovers everywhere, located right here in Pune, Maharashtra.</p> -->
+               <div class="content"> <!-- Added content wrapper -->
+        <div class="post-card" data-post-id="3"> <!-- Added data-post-id -->
+            <a href="post.html" class="post-clickable-area"> <!-- Link to the full post -->
+                <div class="post-card-header-flex"> <!-- Wrapper for title and actions --> 
+                    <h3 class="post-name">Review and Recommendations</h3>
+                    <div class="post-actions-menu"> <!-- This menu now only contains the button and dropdown -->
+                        <button type="button" class="three-dots-btn" aria-label="More options" aria-expanded="false"> ⋮</button>
+                        <div class="share-dropdown">
+                            <a href="#" class="share-option" data-action="share-facebook">Share on Facebook</a>
+                            <a href="#" class="share-option" data-action="share-twitter">Share on Twitter</a>
+                            <a href="#" class="share-option" data-action="share-linkedin">Share on LinkedIn</a>
+                            <button type="button" class="share-option" data-action="copy-link-header">Copy Link</button>
+                        </div>
+                    </div>
+                </div>
+               <p class = "post-content-snippet">Are you an avid reader looking for your next literary adventure? Look no further than "Book Review and Recommendations"! This innovative app is a game-changer for book lovers everywhere, located right here in Pune, Maharashtra.</p>
+               <img src="https://static.wixstatic.com/media/a9e70d_ef027ada8f184e5196d058a4c4b46758~mv2.png/v1/fill/w_740,h_423,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a9e70d_ef027ada8f184e5196d058a4c4b46758~mv2.png"  alt="Post Image" class="post-image">
+                
+                <p class="post-content-snippet">
+                    Imagine walking into a bookstore and being drawn to a captivating book cover. With this app, you can simply snap a picture of the book and in seconds receive valuable feedback or discover similar books that you may enjoy. The app utilizes data from popular platforms like Goodreads and Amazon to provide you with personalized recommendations based on your preferences.
+Whether you're into thrillers, romance, science fiction, or biographies, this app has got you covered. By analyzing your input, "Book Review and Recommendations" ensures that you are presented with books that align with your interests, making the browsing and selection process a breeze.
+No more aimlessly wandering through aisles or scrolling endlessly through online catalogs. Let this app be your guide in unlocking your next great read. Say goodbye to decision fatigue and hello to a world of literary possibilities at your fingertips.
+So why wait? Download "Book Review and Recommendations" today and open the door to a wealth of reading experiences waiting to be discovered. Happy reading!
+                </p>
+            </a>
+            <div class="post-interactions">
+                <!-- Facebook Share Button -->
+                <a href="https://www.facebook.com/" target="_blank" class="interaction-btn" aria-label="Share on Facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> Facebook
+                </a>
+                <!-- Twitter Share Button -->
+                 <a href="https://tweetdeck.twitter.com/" target="_blank" class="interaction-btn" aria-label="Share on twitter">
+                <img src="https://static.vecteezy.com/system/resources/previews/031/737/215/large_2x/twitter-new-logo-twitter-icons-new-twitter-logo-x-2023-x-social-media-icon-free-png.png" alt="Twitter" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> Twitter
+                 </a>
+                 <!-- linkedin Share Button -->
+                  <a href="https://www.linkedin.com/" target="_blank" class="interaction-btn" aria-label="Share on linkedin">
+                    <img src="https://logospng.org/download/linkedin/logo-linkedin-icon-4096.png" alt="Linkedin" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;" > Linkedin
+                </a>
+                <!-- Copy Link Button -->
+                <button type="button" class="interaction-btn copy-link-btn" aria-label="Copy link">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1004/1004756.png" alt="Copy Link" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px;"> <span class="copy-link-text">Copy Link</span>
+                </button>
+                    <!-- Existing Like Button -->
+                <button class="interaction-btn like-btn" aria-label="Like this post">
+                    ❤️ <span class="like-count">0</span> <!-- Changed class and initial value -->
+                </button>
+                <span class="interaction-item reads-info" aria-label="Number of reads">
+                    👁️ <span class="read-count">0</span> <!-- Changed class and initial value -->
+                </span>
+            </div>
+        </div>
+    </div> <!-- Closing tag for content -->
+<script src="script.js"></script> <!---- Add your script file here -->
+
+</body>
+</html>
+        
+        
