@@ -1,0 +1,622 @@
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: brown; 
+            color: #f3e9ea; /* Sets default text color for the entire page */
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between; /* Pushes logo/text to left, search to right */
+            align-items: center; /* Vertically aligns items in the header */
+            padding: 10px 20px; /* Padding inside the header */
+            background-color: brown; /* Light grey background for the header */
+            
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center; /* Aligns logo and text vertically */
+        }
+        .header-left img {
+            height: 50px; /* Logo height */
+            margin-right: 10px; /* Space between logo and text */
+        }
+        .header-left span {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #f3e9ea;
+        }
+        .header-right {
+            display: flex;
+            align-items: center; /* Aligns search input and button */
+        }
+        .header-right input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+            margin-right: -1px; /* Allows button border to overlap nicely */
+            color: #555; /* Color for typed text in input, can be changed if needed */
+        }
+        .header-right input[type="text"]::placeholder {
+            color: #f3e9ea; /* Header text color for placeholder */
+            opacity: 1; /* Ensure placeholder color is applied */
+        }
+        .header-right button {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            background-color: #e9e9e9; /* Light background for button */
+            cursor: pointer;
+            border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+            color: #f3e9ea; /* Header text color for button icon/text */
+        }
+        .header-right button:hover {
+            background-color: #ddd;
+        }
+        
+         .content {
+            /* padding: 20px; Duplicated */
+            padding: 20px; 
+            text-align: center; /* Centers the H1 and the .content-row block if it's not full width */
+            margin-top: 20px; /* Space below the header */
+        }
+        .content-row {
+            display: flex; /* Lays out image and text side-by-side */
+            align-items: flex-start; /* Aligns items to the top; use 'center' for vertical centering */
+            /* text-align: left; Duplicated */
+            text-align: left; /* Aligns text within this row to the left */
+            margin-top: 20px; /* Space below the "Welcome" heading */
+        }
+        .content-image {
+            margin-right: 20px; /* Space between the large left image and the right content block */
+            text-align: left;   /* Aligns the image within this div to the left */
+            flex-shrink: 0; /* Prevents the image container from shrinking if space is limited */
+        }
+        .content-image img {
+            max-width: 100%; /* Ensures image is never wider than its container */
+            height: auto;    /* Maintains aspect ratio */
+            display: block;
+        }
+
+        .content-text-large {
+            font-size: 2.9em; /* Makes the text larger. Adjust as needed. */
+            /* flex-grow: 1; */ /* Uncomment if you want this text block to take up remaining horizontal space */
+        }
+        .image-text-pair {
+            display: flex;
+            align-items: center; /* Vertically centers the image and the text block next to it */
+            margin-top: 15px; /* Optional: space above this pair */
+            margin-bottom: 15px; /* Optional: space below this pair */
+        }
+        .image-text-pair img {
+            margin-right: 15px; /* Space between the image and the text to its right */
+        }
+        .text-beside-image p {
+            font-size: 0.5em; /* Relative to parent's 2.9em, or use 1rem for body-relative size */
+            margin: 0; /* Reset paragraph margin if needed */
+        }
+        /* Add this to your styles.css if you want to customize link appearance */
+.text-beside-image a, .text-beside-imagee a { /* Combined rule for both link classes */
+    text-decoration: none; /* Removes the underline */
+    color: inherit;       /* Makes the link color the same as its parent's text color */
+}
+
+.text-beside-image a:hover, .text-beside-imagee a:hover { /* Combined rule for both link classes */
+    text-decoration: underline; /* Optional: add underline on hover for better UX */
+}
+
+/* Styles for the new large feature box */
+.large-feature-box {
+    display: flex;
+    width: 100%; /* Or set a max-width and center it */
+    /* max-width: 1200px; */
+    /* margin: 40px auto; */
+    /* min-height: 450px; /* Removed fixed min-height */
+    height: 75vh; /* Set height to 75% of the viewport height */
+    min-height: 400px; /* Ensure a reasonable minimum height */
+    max-height: 700px; /* Prevent it from becoming excessively tall */
+    background-color: #f3e9ea; /* Fallback or border color */
+    margin-top: 30px; /* Space from content above */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Include padding and border in height/width calculation */
+}
+
+.feature-text-left {
+    flex-basis: 50%; /* Takes up 50% of the width */
+    background-color: brown; /* Brown background as requested */
+    color: #f3e9ea; /* Light text color for contrast */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    box-sizing: border-box;
+}
+
+.feature-text-left h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.feature-text-left p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.feature-image-right {
+    flex-basis: 50%; /* Takes up 50% of the width */
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #f3e9ea;
+    color: brown;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    align-self: flex-start; /* Align button to the start of the flex container (left) */
+}
+
+.cta-button:hover {
+    background-color: #e0d7d8;
+    color: #5a2d2d;
+}
+.upcoming-event {
+    font-size: 3.0em; 
+}
+.review-main-box {
+    display: flex;
+    width: 100%; /* Or set a max-width and center it */
+    /* max-width: 1200px; */
+    /* margin: 40px auto; */
+    /* min-height: 450px; /* Removed fixed min-height */
+    height: 75vh; /* Set height to 75% of the viewport height */
+    min-height: 400px; /* Ensure a reasonable minimum height */
+    max-height: 700px; /* Prevent it from becoming excessively tall */
+    background-color: brown; /* Fallback or border color */
+    margin-top: 30px; /* Space from content above */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Include padding and border in height/width calculation */
+}
+
+.review-small-box {
+    display: flex;
+    width: 100%; /* Or set a max-width and center it */
+     max-width: 500px; 
+    /* margin: 40px auto; */
+    /* min-height: 450px; /* Removed fixed min-height */
+    height: 45vh; /* Set height to 75% of the viewport height */
+    min-height: 150px; /* Ensure a reasonable minimum height */
+    max-height: 200px; /* Prevent it from becoming excessively tall */
+    background-color: brown; /* Background color */
+    /* margin-top: 60px; /* Removed conflicting margin */
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Include padding and border in height/width calculation */
+border-color: white;
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+color:#e0d7d8;
+    margin: 0 10px; /* Add horizontal margin between boxes */
+    margin-top: 90px;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding inside the box */
+}
+.review{
+ font-size: 3.0em; 
+}   
+.feature-image-rightt {
+    flex-basis: 50%; /* Takes up 50% of the width */
+    background-image: url('https://static.wixstatic.com/media/a9e70d_d0cb179e23aa4663a4b9cefeca6cb52b~mv2.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+}
+
+/* Styles for the new split content box */
+.split-content-box {
+    display: flex;
+    justify-content: space-between; /* Distribute space between left, divider, and right */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    height: 75vh; /* Set height to 75% of the viewport height */
+    min-height: 400px; /* Ensure a reasonable minimum height */
+    max-height: 700px; /* Prevent it from becoming excessively tall */
+    max-width: 1200px; /* Adjust as needed, or use 100% for full width */
+    margin: 40px auto; /* Center the box and add top/bottom margin */
+    padding: 30px;
+    background-color: #f3e9ea; /* Light background for the box */
+    color: brown; /* Text color, assuming you want it to be brown */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.split-left-content, .split-right-content {
+    flex-basis: calc(50% - 25px); /* Each side takes up almost half, minus space for divider and padding */
+    padding: 0 15px; /* Padding within each text section */
+}
+
+.split-left-content h3, .split-right-content h3 {
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #4a2c2a; /* Darker brown for headings */
+}
+
+.split-divider {
+    width: 2px; /* Thickness of the line */
+    background-color: brown; /* Color of the line */
+    align-self: stretch; /* Makes the divider extend to the full height of the content box */
+}
+
+/* Styles for the policy links in the footer-like section */
+.policy-links {
+    margin-top: 20px; /* Space above the policy links */
+    padding-top: 15px; /* Optional: add some padding if there's a border or background */
+    text-align: center; /* Center the links block */
+}
+
+.policy-links a {
+    margin: 0 10px; /* Horizontal space between links */
+    text-decoration: none;
+    color: brown; /* Match the text color of the box */
+    font-size: 0.9em; /* Adjust size as needed */
+}
+
+.policy-links a:hover {
+    text-decoration: underline;
+}
+.review-small-boxx {
+    display: flex;
+    width: 100%; /* Or set a max-width and center it */
+     max-width: 500px; 
+    /* margin: 40px auto; */
+    /* min-height: 450px; /* Removed fixed min-height */
+    height: 70vh; /* Set height to 75% of the viewport height */
+    min-height: 300px; /* Ensure a reasonable minimum height */
+    max-height: 600px; /* Prevent it from becoming excessively tall */
+    background-color: brown; /* Background color */
+    /* margin-top: 60px; /* Removed conflicting margin */
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Include padding and border in height/width calculation */
+border-color: white;
+border-width: 1px;
+border-style: solid;
+border-radius: 10px;
+color:#e0d7d8;
+    margin: 0 10px; /* Add horizontal margin */
+    margin-top: 10px;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding inside the box */
+}
+
+/* --- API Search Results Styling --- */
+/* This container will hold all search results */
+#searchResultsContainer {
+    padding: 20px 0;
+    text-align: left;
+}
+
+/* Grid layout for the book cards */
+.api-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Individual book card */
+.api-book-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    color: #333; /* Set default text color for cards */
+}
+
+.api-book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.api-book-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.api-book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.api-book-card-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.api-book-card-content h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: #333;
+    line-height: 1.3;
+}
+
+.api-book-card-content .author {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.api-book-card-content .description {
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.register{
+    font-size:3.0em;
+}
+.header1 {
+            display: flex;
+            justify-content: space-between; /* Pushes logo/text to left, search to right */
+            align-items: center; /* Vertically aligns items in the header */
+            padding: 10px 20px; /* Padding inside the header */
+            background-color: rgba(131, 6, 6, 0.781); /* Light grey background for the header */
+            
+        }
+        .tickets-info{
+            text-align: center;
+        }
+        .ticket{
+            text-align: center;
+        }
+        .time-location{
+            text-align: center;
+        }
+
+/* Brown section for contact details on course page */
+.contact-info-block {
+    background-color: brown;
+    color: #f3e9ea; /* Light text for contrast */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.contact-info-block h2 {
+    color: #f3e9ea; /* Ensure heading color is also light */
+}
+
+/* Styling for new HR elements */
+hr {
+    border: 0;
+    border-top: 1px solid rgba(243, 233, 234, 0.5);
+}
+
+hr.section-divider {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(243, 233, 234, 0), rgba(243, 233, 234, 0.75), rgba(243, 233, 234, 0));
+    margin: 40px 0;
+}
+
+.review-small-box hr,
+.review-small-boxx hr {
+    width: 80%;
+    border-top: 1px solid #e0d7d8;
+    margin: 15px auto;
+}
+
+
+/* Modal Dialog Box Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #f3e9ea; /* Light cream background */
+    color: brown; /* Brown text */
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 450px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Site Footer */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 30px;
+    background-color: #f3e9ea; /* Light pink/cream color */
+    color: brown; /* Default text color inside footer */
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.site-footer h3 {
+    color: #4a2c2a; /* A darker brown for the heading for emphasis */
+}
+
+.site-footer .interaction-btn,
+.site-footer .policy-links a {
+    color: brown;
+    text-decoration: none;
+}
+
+.site-footer .interaction-btn:hover,
+.site-footer .policy-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .header,
+    .content-row,
+    .large-feature-box,
+    .review-main-box,
+    .split-content-box,
+    .site-footer {
+        flex-direction: column;
+        height: auto; /* Allow height to adjust to content */
+        min-height: unset; /* Remove min-height constraints */
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .header-right {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header-right input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .content-row {
+        align-items: center;
+    }
+
+    .content-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .content-text-large {
+        font-size: 1.8em; /* Reduce font size */
+        text-align: center;
+    }
+
+    .image-text-pair {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-beside-image {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .feature-text-left {
+        padding: 25px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .feature-text-left h2,
+    .split-left-content h3,
+    .split-right-content h3 {
+        font-size: 1.8em;
+    }
+
+    .feature-image-right,
+    .feature-image-rightt {
+        min-height: 250px; /* Give image backgrounds some height */
+    }
+
+    .upcoming-event,
+    .review,
+    .register {
+        font-size: 2.2em; /* Reduce font size */
+    }
+
+    .review-main-box {
+        gap: 20px;
+    }
+
+    .review-small-box,
+    .review-small-boxx {
+        margin: 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .split-divider {
+        display: none; /* Hide divider on mobile */
+    }
+
+    .split-left-content,
+    .split-right-content {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .site-footer {
+        text-align: center;
+        align-items: center;
+    }
+
+    .policy-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book-result-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-cover {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+.access{
+    font-size: 3.0em
+}
+.terms{
+    font-size: 3.0em;
+}
